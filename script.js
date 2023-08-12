@@ -9,18 +9,35 @@ let arr = [
 
 function PrintDeveloper() {
   //Write your code here , just console.log
+  for(let i in arr){
+    if(arr[i].profession=='developer')
+      console.log(arr[i].name);
+  }
 }
 
 function addData() {
   //Write your code here, just console.log
+  let obj = {id:4,name:"susan",age:"20",profession:"intern"};
+  arr.push(obj);
+  console.log(arr);
 }
 
 function removeAdmin() {
   //Write your code here, just console.log
+  let arr2 = [];
+  for(let i in arr){
+    if(arr[i].profession!='admin')//console.log(arr[i]);
+      arr2.push(arr[i]);
+  }
+  arr = arr2;
+  console.log(arr);
 }
 
 function concatenateArray() {
   //Write your code here, just console.log
+  let arr2 = arr.slice();
+  arr = arr.concat(arr2);
+  console.log(arr);
 }
 
 // Here is an example of how functions work,
